@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#0284c7">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    
+    <title>Trạm Y Tế Bát Xát - Vì sức khỏe cộng đồng – Vì hạnh phúc mỗi gia đình</title>
+    
+    <meta name="description" content="Cổng thông tin điện tử Trạm Y tế Bát Xát, Lào Cai. Cung cấp dịch vụ đăng ký khám bệnh, tra cứu lịch tiêm chủng, tư vấn sức khỏe AI, tải biểu mẫu y tế và tin tức phòng chống dịch bệnh.">
+    <meta name="keywords" content="Trạm Y tế Bát Xát, khám bệnh Bát Xát, tiêm chủng Bát Xát, y tế cơ sở, y tế Lào Cai">
+    <meta name="author" content="Trạm Y Tế Bát Xát">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tytbatxat.org.vn/">
+    <meta property="og:title" content="Trạm Y Tế Bát Xát - Cổng Thông Tin & Dịch Vụ Y Tế Số">
+    <meta property="og:description" content="Tra cứu lịch tiêm chủng, đặt lịch khám nhanh chóng và nhận tư vấn y khoa từ Trợ lý AI. Vì sức khỏe cộng đồng – Vì hạnh phúc mỗi gia đình.">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="vi_VN">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], },
+                    colors: {
+                        medical: {
+                            50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 400: '#38bdf8',
+                            500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .glass-effect { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .service-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+        .service-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .markdown-body strong { font-weight: 700; color: #111827; }
+        .markdown-body br { margin-bottom: 8px; content: ""; display: block; }
+        .markdown-body ul { list-style-type: disc; padding-left: 1.5rem; margin-top: 0.5rem; margin-bottom: 0.5rem; }
+        .markdown-body table { width: 100%; text-align: left; border-collapse: collapse; margin: 10px 0; }
+        .markdown-body th, .markdown-body td { border: 1px solid #e5e7eb; padding: 8px; }
+        .markdown-body th { background-color: #f9fafb; font-weight: bold; }
+        .admin-tab { display: none; }
+        .admin-tab.active { display: block; animation: fadeIn 0.25s ease-in-out; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased relative">
+
+    <!-- FACEBOOK SDK FOR AUTO-SYNC FANPAGE -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v17.0" nonce="trạm_y_tế_bát_xát"></script>
+
+    <div id="main-website">
+        <!-- ================= HEADER ================= -->
+        <header class="glass-effect fixed w-full top-0 z-40 border-b border-gray-200 shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                    <div class="flex items-center gap-3">
+                        <img src="logo.png" alt="Logo Trạm Y tế Bát Xát" class="w-12 h-12 object-contain drop-shadow-sm rounded-full bg-white border border-gray-100 p-0.5" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><circle cx=\'50\' cy=\'50\' r=\'50\' fill=\'%230284c7\'/><path d=\'M50 20v60M20 50h60\' stroke=\'white\' stroke-width=\'15\' stroke-linecap=\'round\'/></svg>'">
+                        <div>
+                            <h1 class="text-xl font-extrabold text-medical-900 leading-tight uppercase tracking-wide">Trạm Y Tế Bát Xát</h1>
+                            <div class="hidden md:flex items-center gap-2 mt-0.5">
+                                <p id="header-slogan" class="text-xs text-medical-600 font-bold">Vì sức khỏe cộng đồng – Vì hạnh phúc mỗi gia đình</p>
+                                <button onclick="window.generateDailyTipAI()" class="text-orange-500 hover:bg-orange-50 px-2 py-0.5 rounded text-[10px] font-black transition border border-orange-200 uppercase" title="Lời khuyên sức khỏe AI">✨ Mẹo AI</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <nav class="hidden lg:flex space-x-6 items-center">
+                        <a href="#" onclick="window.switchPage('home')" id="nav-home" class="text-medical-600 border-b-2 border-medical-600 pb-1 font-bold transition text-[15px]">Trang chủ</a>
+                        <a href="#" onclick="window.switchPage('dept')" id="nav-dept" class="text-gray-700 hover:text-medical-600 border-b-2 border-transparent pb-1 font-bold transition text-[15px]">Khoa & Phòng</a>
+                        <a href="#tin-tuc" onclick="window.switchPage('home'); setTimeout(() => document.getElementById('tin-tuc').scrollIntoView(), 100)" class="text-gray-700 hover:text-medical-600 border-b-2 border-transparent pb-1 font-bold transition text-[15px]">Tin tức & Lịch tiêm</a>
+                        <a href="#" onclick="window.openDocsModal('Biểu mẫu y tế')" class="text-gray-700 hover:text-medical-600 border-b-2 border-transparent pb-1 font-bold transition text-[15px]">Biểu mẫu/Tài liệu</a>
+                        
+                        <button onclick="window.openModal('modal-aisearch')" class="text-purple-600 hover:text-white hover:bg-purple-600 font-bold transition text-[15px] flex items-center gap-2 bg-purple-50 px-5 py-2 rounded-full border border-purple-200 shadow-sm">
+                            <i class="fas fa-robot text-lg"></i> Trợ lý AI
+                        </button>
+                        
+                        <a href="tel:0382103002" class="flex items-center gap-2 bg-red-100 text-red-700 hover:bg-red-600 hover:text-white px-5 py-2 rounded-full font-black border border-red-200 transition shadow-sm">
+                            <i class="fas fa-phone-volume animate-pulse"></i> 0382.103.002
+                        </a>
+                    </nav>
+
+                    <div class="lg:hidden flex items-center gap-3">
+                        <button onclick="window.openModal('modal-aisearch')" class="text-purple-600 bg-purple-50 w-10 h-10 rounded-full border border-purple-200 flex justify-center items-center"><i class="fas fa-robot"></i></button>
+                        <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-gray-700 text-2xl"><i class="fas fa-bars"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-4 space-y-1 shadow-2xl absolute w-full left-0 z-50">
+                <a href="#" onclick="window.switchPage('home'); document.getElementById('mobile-menu').classList.add('hidden')" class="block px-3 py-3 font-bold text-medical-600 bg-gray-50 border-b border-gray-100">Trang chủ</a>
+                <a href="#" onclick="window.switchPage('dept'); document.getElementById('mobile-menu').classList.add('hidden')" class="block px-3 py-3 font-bold text-gray-700 hover:text-medical-600 border-b border-gray-100">Khoa & Phòng Chức năng</a>
+                <a href="#tin-tuc" onclick="window.switchPage('home'); setTimeout(() => document.getElementById('tin-tuc').scrollIntoView(), 100); document.getElementById('mobile-menu').classList.add('hidden')" class="block px-3 py-3 font-bold text-gray-700 border-b border-gray-100">Tin tức & Lịch tiêm</a>
+                <a href="#" onclick="window.openDocsModal('Biểu mẫu y tế'); document.getElementById('mobile-menu').classList.add('hidden')" class="block px-3 py-3 font-bold text-gray-700 border-b border-gray-100">Kho Tài liệu</a>
+                <a href="#" onclick="window.openModal('modal-danhba'); document.getElementById('mobile-menu').classList.add('hidden')" class="block px-3 py-3 font-bold text-gray-700 border-b border-gray-100">Danh bạ Cán bộ</a>
+                <a href="tel:0382103002" class="block mt-4 text-center px-4 py-3 text-white font-bold bg-red-600 rounded-xl shadow-md"><i class="fas fa-phone-alt mr-2"></i> Gọi Cấp Cứu</a>
+            </div>
+        </header>
+
+        <!-- ================= TRANG CHỦ ================= -->
+        <div id="trang-chu-container" class="block animate-[fadeIn_0.3s_ease-in-out]">
+            <section class="pt-28 pb-12 bg-gradient-to-br from-medical-50 to-white relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-20">
+                    <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-medical-200 blur-3xl"></div>
+                    <div class="absolute top-1/2 -left-24 w-72 h-72 rounded-full bg-blue-200 blur-3xl"></div>
+                </div>
+                
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                        <div class="md:w-3/5 space-y-6 text-center md:text-left">
+                            <div class="inline-block px-4 py-2 rounded-full bg-blue-100 text-medical-800 font-bold text-sm mb-2 border border-blue-200 shadow-sm">
+                                <i class="fas fa-shield-alt text-medical-600 mr-1"></i> Cổng thông tin Y tế số chính quy
+                            </div>
+                            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                                Hệ thống Y tế tuyến đầu <br/>
+                                <span class="text-transparent bg-clip-text bg-gradient-to-r from-medical-600 to-blue-500">Tận tâm & Hiện đại</span>
+                            </h2>
+                            <p class="text-lg text-gray-700 font-medium">Hỗ trợ nhân dân tra cứu thuốc bằng AI, đặt lịch khám BHYT trực tuyến, cập nhật lịch tiêm phòng dịch và kết nối nhanh tới Cán bộ chuyên trách.</p>
+                            <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-2">
+                                <button onclick="window.switchPage('dept')" class="w-full sm:w-auto bg-gradient-to-r from-medical-600 to-medical-500 text-white px-8 py-4 rounded-2xl font-bold shadow-xl transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                                    <i class="fas fa-hospital text-xl"></i> Khám phá Khoa & Phòng
+                                </button>
+                                <button onclick="window.openModal('modal-datlich')" class="w-full sm:w-auto bg-white text-medical-700 border-2 border-medical-200 px-8 py-4 rounded-2xl font-bold shadow-lg transition transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                                    <i class="fas fa-calendar-check text-xl"></i> Đặt lịch khám bệnh
+                                </button>
+                            </div>
+                        </div>
+                        <div class="md:w-2/5 flex justify-center mt-8 md:mt-0">
+                            <div class="w-full max-w-sm aspect-square bg-white rounded-full shadow-2xl border-8 border-medical-100 flex flex-col items-center justify-center relative overflow-hidden p-6">
+                                <img src="logo.png" alt="Logo Trạm Y tế Bát Xát" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><circle cx=\'50\' cy=\'50\' r=\'50\' fill=\'%230284c7\'/><path d=\'M50 20v60M20 50h60\' stroke=\'white\' stroke-width=\'15\' stroke-linecap=\'round\'/></svg>'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- KHẨN CẤP -->
+            <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-20 mb-16">
+                <div class="bg-white rounded-3xl shadow-2xl p-6 md:p-8 border-t-8 border-red-500">
+                    <h3 class="text-xl font-black text-gray-800 mb-6 text-center uppercase tracking-wider"><i class="fas fa-ambulance text-red-500 mr-2"></i> Kênh liên hệ khẩn cấp</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <a href="tel:0382103002" class="group bg-red-50 hover:bg-red-600 text-red-700 hover:text-white rounded-2xl p-5 flex flex-col items-center text-center transition-all border-2 border-red-100 shadow-sm">
+                            <i class="fas fa-phone-volume text-4xl mb-2 group-hover:scale-110 transition-transform"></i><div class="font-bold">Gọi Trạm Y tế Bát Xát</div><div class="text-2xl font-black">0382.103.002</div>
+                        </a>
+                        <a href="tel:115" class="group bg-red-600 hover:bg-red-700 text-white rounded-2xl p-5 flex flex-col items-center text-center transition-all shadow-md">
+                            <i class="fas fa-truck-medical text-5xl mb-2 group-hover:animate-pulse"></i><div class="font-bold uppercase">Gọi cấp cứu 115</div><div class="text-3xl font-black">115</div>
+                        </a>
+                        <button onclick="window.openModal('modal-danhba')" class="group bg-blue-50 hover:bg-blue-600 text-medical-700 hover:text-white rounded-2xl p-5 flex flex-col items-center text-center transition-all border-2 border-blue-100 shadow-sm">
+                            <i class="fas fa-user-nurse text-4xl mb-2 group-hover:scale-110 transition-transform"></i><div class="font-bold">Danh bạ Cán bộ Y tế</div><div class="text-base font-bold">Xem chi tiết SĐT trực ban</div>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TIN TỨC & FANPAGE -->
+            <section id="tin-tuc" class="py-12 bg-white border-t border-gray-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <div class="space-y-8">
+                            <!-- Lịch Tiêm Chủng -->
+                            <div>
+                                <div class="flex items-center gap-3 mb-6 border-b pb-3">
+                                    <i class="fas fa-calendar-alt text-3xl text-medical-600"></i>
+                                    <h3 class="text-2xl font-black text-gray-900">Lịch Tiêm Chủng Mở Rộng</h3>
+                                </div>
+                                <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+                                    <table class="w-full text-left border-collapse">
+                                        <thead><tr class="bg-medical-50 text-medical-900"><th class="p-4 font-bold border-b">Ngày/Giờ</th><th class="p-4 font-bold border-b">Thôn bản phụ trách</th></tr></thead>
+                                        <tbody id="public-vaccine-list"></tbody>
+                                    </table>
+                                </div>
+                                <p class="mt-3 text-sm italic text-gray-500"><i class="fas fa-info-circle text-medical-500"></i> Lưu ý: Nhớ mang theo Sổ tiêm chủng và CCCD gắn chíp (hoặc VNeID).</p>
+                            </div>
+                            
+                            <!-- Tin nội bộ -->
+                            <div>
+                                <div class="flex items-center justify-between mb-6 border-b pb-3">
+                                    <div class="flex items-center gap-3"><i class="fas fa-bullhorn text-3xl text-orange-500"></i><h3 class="text-xl font-black text-gray-900">Thông báo từ Trạm</h3></div>
+                                </div>
+                                <div class="space-y-4" id="news-container"></div>
+                            </div>
+                        </div>
+
+                        <!-- Facebook Page Plugin -->
+                        <div>
+                            <div class="flex items-center gap-3 mb-6 border-b pb-3">
+                                <i class="fab fa-facebook text-3xl text-blue-600"></i>
+                                <h3 class="text-2xl font-black text-gray-900">Tin tức Y tế Mới nhất</h3>
+                            </div>
+                            <div class="bg-gray-50 p-2 rounded-2xl border border-gray-200 shadow-sm flex justify-center overflow-hidden w-full min-h-[500px]">
+                                <div class="fb-page" 
+                                    data-href="https://www.facebook.com/profile.php?id=61556920635321" 
+                                    data-tabs="timeline" 
+                                    data-width="500" 
+                                    data-height="600" 
+                                    data-small-header="false" 
+                                    data-adapt-container-width="true" 
+                                    data-hide-cover="false" 
+                                    data-show-facepile="false">
+                                    <blockquote cite="https://www.facebook.com/profile.php?id=61556920635321" class="fb-xfbml-parse-ignore">
+                                        <a href="https://www.facebook.com/profile.php?id=61556920635321">Đang tải luồng dữ liệu từ Fanpage Trạm Y tế Bát Xát...</a>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= KHOA PHÒNG & DỊCH VỤ ================= -->
+        <div id="khoa-phong-container" class="hidden pt-28 pb-12 bg-gray-50 min-h-screen animate-[fadeIn_0.3s_ease-in-out]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-black text-gray-900 uppercase tracking-wide">Dịch Vụ & Khoa Phòng</h2>
+                    <p class="text-medical-600 font-bold mt-2">Hệ thống chức năng đã được kết nối biểu mẫu trực tuyến và AI hỗ trợ</p>
+                </div>
+
+                <div class="flex justify-start md:justify-center border-b-2 border-gray-200 mb-8 overflow-x-auto hide-scrollbar snap-x">
+                    <button onclick="window.switchFrontendTab('kham-benh', event)" class="frontend-tab-btn active snap-center px-6 py-4 text-sm md:text-base font-black whitespace-nowrap border-b-4 border-medical-600 text-medical-700 transition-colors"><i class="fas fa-stethoscope mr-2"></i> Khám & Chữa Bệnh</button>
+                    <button onclick="window.switchFrontendTab('hanh-chinh', event)" class="frontend-tab-btn snap-center px-6 py-4 text-sm md:text-base font-bold whitespace-nowrap border-b-4 border-transparent text-gray-500 hover:text-medical-600 transition-colors"><i class="fas fa-building mr-2"></i> Hành Chính & BHYT</button>
+                    <button onclick="window.switchFrontendTab('phong-benh', event)" class="frontend-tab-btn snap-center px-6 py-4 text-sm md:text-base font-bold whitespace-nowrap border-b-4 border-transparent text-gray-500 hover:text-medical-600 transition-colors"><i class="fas fa-shield-virus mr-2"></i> Y Tế Dự Phòng</button>
+                    <button onclick="window.switchFrontendTab('ai-hub', event)" class="frontend-tab-btn snap-center px-6 py-4 text-sm md:text-base font-bold whitespace-nowrap border-b-4 border-transparent text-purple-500 hover:text-purple-600 transition-colors"><i class="fas fa-robot mr-2"></i> Trợ lý Y Tế AI</button>
+                </div>
+
+                <!-- CONTENT: KHÁM BỆNH -->
+                <div id="tab-kham-benh" class="frontend-tab-content block animate-[fadeIn_0.3s_ease-in-out]">
+                    <div class="bg-white p-6 md:p-8 rounded-3xl shadow-md border-t-4 border-green-500 mb-10">
+                        <div class="flex items-center gap-3 mb-6"><div class="w-12 h-12 bg-green-100 text-green-600 flex items-center justify-center rounded-xl text-2xl"><i class="fas fa-stethoscope"></i></div><h3 class="text-2xl font-black text-gray-900">Khoa Khám Bệnh & Lâm Sàng</h3></div>
+                        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                            <div onclick="window.openModal('modal-datlich')" class="service-card bg-green-50 p-5 rounded-2xl border border-green-200 cursor-pointer text-center"><i class="fas fa-user-md text-3xl text-green-600 mb-2"></i><h4 class="font-bold text-green-900 text-sm">Đăng ký khám</h4></div>
+                            <div onclick="window.openModal('modal-tiemchung')" class="service-card bg-green-50 p-5 rounded-2xl border border-green-200 cursor-pointer text-center"><i class="fas fa-syringe text-3xl text-green-600 mb-2"></i><h4 class="font-bold text-green-900 text-sm">Tiêm chủng mở rộng</h4></div>
+                            <div onclick="window.openModal('modal-tracuuketqua')" class="service-card bg-green-50 p-5 rounded-2xl border border-green-200 cursor-pointer text-center"><i class="fas fa-clipboard-check text-3xl text-green-600 mb-2"></i><h4 class="font-bold text-green-900 text-sm">Tra cứu kết quả</h4></div>
+                            <div onclick="window.openSupportModal('Sức khỏe Sinh sản & Phụ sản')" class="service-card bg-green-50 p-5 rounded-2xl border border-green-200 cursor-pointer text-center"><i class="fas fa-baby-carriage text-3xl text-green-600 mb-2"></i><h4 class="font-bold text-green-900 text-sm">Sức khỏe sinh sản</h4></div>
+                            <div onclick="window.openSupportModal('Chăm sóc Sức khỏe Người cao tuổi')" class="service-card bg-green-50 p-5 rounded-2xl border border-green-200 cursor-pointer text-center"><i class="fas fa-person-cane text-3xl text-green-600 mb-2"></i><h4 class="font-bold text-green-900 text-sm">Người cao tuổi</h4></div>
+                            <div onclick="window.openSupportModal('Dân số và Kế hoạch hóa gia đình')" class="service-card bg-green-50 p-5 rounded-2xl border border-green-200 cursor-pointer text-center"><i class="fas fa-users text-3xl text-green-600 mb-2"></i><h4 class="font-bold text-green-900 text-sm">Dân số phát triển</h4></div>
+                            <div onclick="window.openSupportModal('Hỗ trợ bệnh nhân diện Bảo trợ')" class="service-card bg-green-50 p-5 rounded-2xl border border-green-200 cursor-pointer text-center"><i class="fas fa-wheelchair text-3xl text-green-600 mb-2"></i><h4 class="font-bold text-green-900 text-sm">Bảo trợ y tế</h4></div>
+                            <div onclick="window.openModal('modal-tuvansuckhoe')" class="service-card bg-gradient-to-br from-green-50 to-teal-50 p-5 rounded-2xl border border-teal-200 cursor-pointer text-center relative overflow-hidden"><div class="absolute -right-2 -top-2 bg-teal-500 text-white text-[10px] px-2 py-1 rounded-bl-xl font-bold">AI</div><i class="fas fa-headset text-3xl text-teal-600 mb-2"></i><h4 class="font-bold text-teal-900 text-sm">Tư vấn Dinh dưỡng</h4></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTENT: HÀNH CHÍNH -->
+                <div id="tab-hanh-chinh" class="frontend-tab-content hidden animate-[fadeIn_0.3s_ease-in-out]">
+                    <div class="bg-white p-6 md:p-8 rounded-3xl shadow-md border-t-4 border-blue-500 mb-10">
+                        <div class="flex items-center gap-3 mb-6"><div class="w-12 h-12 bg-blue-100 text-blue-600 flex items-center justify-center rounded-xl text-2xl"><i class="fas fa-building"></i></div><h3 class="text-2xl font-black text-gray-900">Phòng Hành Chính & Tổng Hợp</h3></div>
+                        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                            <div onclick="window.openSupportModal('Giải đáp Thủ tục Khám chữa bệnh BHYT')" class="service-card bg-blue-50 p-5 rounded-2xl border border-blue-200 cursor-pointer text-center"><i class="fas fa-id-card text-3xl text-blue-600 mb-2"></i><h4 class="font-bold text-blue-900 text-sm">Thủ tục BHYT</h4></div>
+                            <div onclick="window.openDocsModal('Biểu mẫu y tế')" class="service-card bg-blue-50 p-5 rounded-2xl border border-blue-200 cursor-pointer text-center"><i class="fas fa-file-invoice text-3xl text-blue-600 mb-2"></i><h4 class="font-bold text-blue-900 text-sm">Tải Biểu mẫu</h4></div>
+                            <div onclick="window.openModal('modal-gopy')" class="service-card bg-blue-50 p-5 rounded-2xl border border-blue-200 cursor-pointer text-center"><i class="fas fa-comment-medical text-3xl text-blue-600 mb-2"></i><h4 class="font-bold text-blue-900 text-sm">Hòm thư Góp ý</h4></div>
+                            <div onclick="window.openModal('modal-danhba')" class="service-card bg-blue-50 p-5 rounded-2xl border border-blue-200 cursor-pointer text-center"><i class="fas fa-address-book text-3xl text-blue-600 mb-2"></i><h4 class="font-bold text-blue-900 text-sm">Danh bạ Cán bộ</h4></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTENT: PHÒNG BỆNH -->
+                <div id="tab-phong-benh" class="frontend-tab-content hidden animate-[fadeIn_0.3s_ease-in-out]">
+                    <div class="bg-white p-6 md:p-8 rounded-3xl shadow-md border-t-4 border-orange-500">
+                        <div class="flex items-center gap-3 mb-6"><div class="w-12 h-12 bg-orange-100 text-orange-600 flex items-center justify-center rounded-xl text-2xl"><i class="fas fa-shield-virus"></i></div><h3 class="text-2xl font-black text-gray-900">Khoa Y Tế Dự Phòng & ATTP</h3></div>
+                        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                            <div onclick="window.openSupportModal('Báo cáo & Xử lý Dịch bệnh truyền nhiễm')" class="service-card bg-orange-50 p-5 rounded-2xl border border-orange-200 cursor-pointer text-center"><i class="fas fa-mosquito text-3xl text-orange-600 mb-2"></i><h4 class="font-bold text-orange-900 text-sm">Phòng chống dịch</h4></div>
+                            <div onclick="window.openSupportModal('Báo cáo Ngộ độc thực phẩm/Nấm độc')" class="service-card bg-orange-50 p-5 rounded-2xl border border-orange-200 cursor-pointer text-center"><i class="fas fa-utensils text-3xl text-orange-600 mb-2"></i><h4 class="font-bold text-orange-900 text-sm">An toàn thực phẩm</h4></div>
+                            <div onclick="window.openSupportModal('Tư vấn phòng bệnh Mùa hè / Thiên tai')" class="service-card bg-orange-50 p-5 rounded-2xl border border-orange-200 cursor-pointer text-center"><i class="fas fa-cloud-showers-heavy text-3xl text-orange-600 mb-2"></i><h4 class="font-bold text-orange-900 text-sm">Phòng bệnh thời tiết</h4></div>
+                            <div onclick="window.openModal('modal-video')" class="service-card bg-orange-50 p-5 rounded-2xl border border-orange-200 cursor-pointer text-center"><i class="fab fa-youtube text-3xl text-orange-600 mb-2"></i><h4 class="font-bold text-orange-900 text-sm">Video y khoa</h4></div>
+                            <div onclick="window.openDocsModal('Tài liệu y tế')" class="service-card bg-orange-50 p-5 rounded-2xl border border-orange-200 cursor-pointer text-center"><i class="fas fa-book-medical text-3xl text-orange-600 mb-2"></i><h4 class="font-bold text-orange-900 text-sm">Tài liệu sức khỏe</h4></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTENT: AI HUB -->
+                <div id="tab-ai-hub" class="frontend-tab-content hidden animate-[fadeIn_0.3s_ease-in-out]">
+                    <div class="bg-white p-6 md:p-8 rounded-3xl shadow-md border-t-4 border-purple-500">
+                        <div class="flex items-center gap-3 mb-6"><div class="w-12 h-12 bg-purple-100 text-purple-600 flex items-center justify-center rounded-xl text-2xl"><i class="fas fa-robot"></i></div><h3 class="text-2xl font-black text-gray-900">Trung tâm Trợ lý Y Tế AI</h3><span class="bg-purple-100 text-purple-700 px-2 py-1 rounded text-xs font-bold ml-2">Gemini Powered</span></div>
+                        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                            <div onclick="window.openModal('modal-aisearch')" class="service-card bg-gradient-to-br from-purple-50 to-fuchsia-50 p-5 rounded-2xl border border-purple-200 cursor-pointer text-center relative"><i class="fas fa-search text-3xl text-purple-600 mb-2"></i><h4 class="font-bold text-purple-900 text-sm">Tìm kiếm Y tế AI</h4></div>
+                            <div onclick="window.openModal('modal-aivision')" class="service-card bg-gradient-to-br from-blue-50 to-cyan-50 p-5 rounded-2xl border border-blue-200 cursor-pointer text-center relative"><i class="fas fa-camera text-3xl text-blue-600 mb-2"></i><h4 class="font-bold text-blue-900 text-sm">Đọc Ảnh Y khoa</h4></div>
+                            <div onclick="window.openModal('modal-aidich')" class="service-card bg-gradient-to-br from-teal-50 to-emerald-50 p-5 rounded-2xl border border-teal-200 cursor-pointer text-center relative"><i class="fas fa-language text-3xl text-teal-600 mb-2"></i><h4 class="font-bold text-teal-900 text-sm">Dịch thuật Y khoa</h4></div>
+                            <div onclick="window.openModal('modal-chiso')" class="service-card bg-gradient-to-br from-indigo-50 to-blue-50 p-5 rounded-2xl border border-indigo-200 cursor-pointer text-center relative"><i class="fas fa-file-medical-alt text-3xl text-indigo-600 mb-2"></i><h4 class="font-bold text-indigo-900 text-sm">Đọc chỉ số Sức khỏe</h4></div>
+                            <div onclick="window.openModal('modal-tracuuthuoc')" class="service-card bg-gradient-to-br from-violet-50 to-purple-50 p-5 rounded-2xl border border-violet-200 cursor-pointer text-center relative"><i class="fas fa-pills text-3xl text-violet-600 mb-2"></i><h4 class="font-bold text-violet-900 text-sm">Tra cứu Thuốc AI</h4></div>
+                            <div onclick="window.openModal('modal-lichuongthuoc')" class="service-card bg-gradient-to-br from-fuchsia-50 to-pink-50 p-5 rounded-2xl border border-fuchsia-200 cursor-pointer text-center relative"><i class="fas fa-calendar-plus text-3xl text-fuchsia-600 mb-2"></i><h4 class="font-bold text-fuchsia-900 text-sm">Lên lịch Thuốc AI</h4></div>
+                            <div onclick="window.openModal('modal-caythuoc')" class="service-card bg-gradient-to-br from-green-50 to-lime-50 p-5 rounded-2xl border border-green-200 cursor-pointer text-center relative"><i class="fas fa-leaf text-3xl text-green-600 mb-2"></i><h4 class="font-bold text-green-900 text-sm">Hỏi đáp Cây thuốc</h4></div>
+                            <div onclick="window.openModal('modal-socuu')" class="service-card bg-gradient-to-br from-red-50 to-orange-50 p-5 rounded-2xl border border-red-200 cursor-pointer text-center relative"><i class="fas fa-briefcase-medical text-3xl text-red-600 mb-2"></i><h4 class="font-bold text-red-900 text-sm">Sơ cứu Khẩn cấp</h4></div>
+                            <div onclick="window.openModal('modal-tuongtacthuoc')" class="service-card bg-gradient-to-br from-rose-50 to-red-50 p-5 rounded-2xl border border-rose-200 cursor-pointer text-center relative"><i class="fas fa-exclamation-triangle text-3xl text-rose-600 mb-2"></i><h4 class="font-bold text-rose-900 text-sm">Kiểm tra Tương tác</h4></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= FOOTER ================= -->
+        <footer id="lien-he" class="bg-medical-900 text-white pt-16 pb-8 border-t-8 border-medical-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="bg-white p-1.5 rounded-full inline-block shadow-lg"><img src="logo.png" alt="Logo Trạm Y tế Bát Xát" class="w-14 h-14 object-contain rounded-full bg-white border border-gray-100 p-0.5"></div>
+                            <h3 class="text-2xl font-black uppercase tracking-widest text-blue-50 leading-tight">Trạm Y Tế<br>Bát Xát</h3>
+                        </div>
+                        <p class="text-blue-100 text-base leading-relaxed font-medium text-justify">Trực thuộc Ủy Ban nhân dân xã Bát Xát quản lý trực tiếp. Đơn vị sự nghiệp y tế tuyến cơ sở, đảm bảo công tác chăm sóc sức khỏe ban đầu, phòng chống dịch bệnh.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-6 border-b-2 border-medical-700 pb-2 uppercase tracking-wide text-blue-50">Thông tin liên hệ</h3>
+                        <ul class="space-y-4 text-blue-100 text-base">
+                            <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt mt-1.5 text-xl text-medical-400"></i><span class="font-medium">Thôn 08, Xã Bát Xát, Tỉnh Lào Cai</span></li>
+                            <li class="flex items-center gap-3"><i class="fas fa-phone-alt text-xl text-medical-400"></i><a href="tel:0382103002" class="hover:text-white transition font-black">0382.103.002</a></li>
+                            <li class="flex items-center gap-3"><i class="fas fa-envelope text-xl text-medical-400"></i><a href="mailto:tytbatxat@laocai.gov.vn" class="hover:text-white transition font-bold">tytbatxat@laocai.gov.vn</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-6 border-b-2 border-medical-700 pb-2 uppercase text-blue-50">Bản đồ vị trí</h3>
+                        <div class="w-full h-40 bg-medical-800 rounded-xl flex items-center justify-center border border-medical-700 shadow-inner">
+                            <a href="https://maps.google.com" target="_blank" class="text-sm bg-white text-medical-900 px-6 py-3 rounded-full font-black shadow-lg hover:bg-medical-50 transition"><i class="fas fa-map-marked-alt mr-2"></i>Mở Google Maps</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t border-medical-800 pt-8 flex justify-between items-center text-sm text-blue-200">
+                    <p>© 2026 Trạm Y Tế Xã Bát Xát.</p>
+                    <a href="#" onclick="window.openModal('modal-admin-login'); return false;" class="hover:text-white font-black text-medical-400 tracking-wider">QUẢN TRỊ CMS</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- ================= CÁC MODAL CỦA HỆ THỐNG ================= -->
+    <div id="modal-overlay" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center backdrop-blur-sm transition-opacity overflow-y-auto p-4">
+        
+        <!-- Các Form cơ bản -->
+        <div id="modal-hotrochuyenmon" class="modal-content hidden bg-white rounded-3xl w-full max-w-md mx-auto my-auto overflow-hidden shadow-2xl">
+            <div class="bg-green-600 p-5 flex justify-between text-white"><h3 class="font-bold text-xl"><i class="fas fa-user-md mr-2"></i><span id="support-title">Tư vấn chuyên môn</span></h3><button onclick="window.closeModal()"><i class="fas fa-times"></i></button></div>
+            <div class="p-6">
+                <input type="text" id="support-topic" readonly class="w-full border-2 bg-gray-100 text-gray-800 rounded-xl px-4 py-2.5 mb-3 font-bold">
+                <textarea id="support-question" rows="3" class="w-full border-2 border-green-200 rounded-xl px-4 py-3 mb-3 focus:ring-2 focus:ring-green-100 outline-none" placeholder="Nhập câu hỏi hoặc tình trạng của bạn..."></textarea>
+                <button onclick="window.askExpertAI()" class="w-full bg-green-600 hover:bg-green-700 transition text-white font-bold py-3.5 rounded-xl shadow-lg">✨ Hỏi Trợ lý AI ngay</button>
+                <div id="support-result" class="mt-4 markdown-body hidden text-sm p-4 bg-green-50 rounded-xl border border-green-100 max-h-48 overflow-y-auto"></div>
+            </div>
+        </div>
+
+        <div id="modal-datlich" class="modal-content hidden bg-white rounded-3xl w-full max-w-md mx-auto my-auto overflow-hidden shadow-2xl">
+            <div class="bg-medical-600 p-5 flex justify-between text-white"><h3 class="font-bold text-xl"><i class="fas fa-calendar-check mr-2"></i> Đăng ký khám BHYT</h3><button onclick="window.closeModal()"><i class="fas fa-times"></i></button></div>
+            <div class="p-6"><form onsubmit="window.submitForm(event)">
+                <select id="booking-dept" required class="w-full border-2 border-gray-200 rounded-xl px-4 py-2.5 mb-3 bg-white"></select>
+                <input type="text" required class="w-full border-2 border-gray-200 rounded-xl px-4 py-2.5 mb-3" placeholder="Họ và tên người bệnh">
+                <input type="tel" required class="w-full border-2 border-gray-200 rounded-xl px-4 py-2.5 mb-3" placeholder="Số điện thoại liên hệ">
+                <textarea required class="w-full border-2 border-gray-200 rounded-xl px-4 py-2.5 mb-3" placeholder="Ghi chú triệu chứng..."></textarea>
+                <button type="submit" class="w-full bg-medical-600 text-white font-bold py-3.5 rounded-xl shadow-md">Gửi hồ sơ đăng ký</button>
+            </form></div>
+        </div>
+
+        <div id="modal-danhba" class="modal-content hidden bg-white rounded-3xl w-full max-w-md mx-auto my-auto overflow-hidden shadow-2xl">
+            <div class="bg-gray-800 p-5 flex justify-between text-white"><h3 class="font-bold text-xl"><i class="fas fa-address-book mr-2"></i> Danh bạ Cán bộ</h3><button onclick="window.closeModal()"><i class="fas fa-times"></i></button></div>
+            <ul class="divide-y divide-gray-100 max-h-[60vh] overflow-y-auto" id="contact-list"></ul>
+        </div>
+
+        <div id="modal-aisearch" class="modal-content hidden bg-white rounded-3xl w-full max-w-2xl mx-auto my-auto overflow-hidden shadow-2xl">
+            <div class="bg-purple-600 p-5 flex justify-between text-white"><h3 class="font-bold text-xl"><i class="fas fa-search mr-2"></i> Tìm kiếm Y tế AI</h3><button onclick="window.closeModal()"><i class="fas fa-times"></i></button></div>
+            <div class="p-6">
+                <input type="text" id="global-ai-search-input" class="w-full border-2 border-purple-200 rounded-xl px-4 py-3.5 mb-3 focus:ring-2 focus:ring-purple-100 outline-none font-medium" placeholder="Nhập câu hỏi (Ví dụ: Làm thẻ BHYT cần gì?)...">
+                <button onclick="window.performAISearch()" class="w-full bg-purple-600 text-white font-bold py-3.5 rounded-xl shadow-md">✨ Tìm kiếm thông minh</button>
+                <div id="aisearch-result" class="mt-4 markdown-body hidden text-sm bg-purple-50 p-4 rounded-xl border border-purple-100 max-h-60 overflow-y-auto"></div>
+            </div>
+        </div>
+
+        <div id="modal-tiemchung" class="modal-content hidden bg-white rounded-3xl w-full max-w-md mx-auto my-auto overflow-hidden shadow-2xl">
+            <div class="bg-red-500 p-5 flex justify-between text-white"><h3 class="font-bold text-xl"><i class="fas fa-syringe mr-2"></i> Đăng ký Tiêm chủng</h3><button onclick="window.closeModal()"><i class="fas fa-times"></i></button></div>
+            <div class="p-6"><form onsubmit="window.submitForm(event)">
+                <input type="text" required class="w-full border-2 border-red-200 rounded-xl px-4 py-2.5 mb-3" placeholder="Tên trẻ / Người tiêm">
+                <input type="tel" required class="w-full border-2 border-red-200 rounded-xl px-4 py-2.5 mb-3" placeholder="Số điện thoại">
+                <input type="text" required class="w-full border-2 border-red-200 rounded-xl px-4 py-2.5 mb-3" placeholder="Loại Vắc-xin (nếu biết)">
+                <button type="submit" class="w-full bg-red-500 text-white font-bold py-3.5 rounded-xl shadow-md">Gửi đăng ký</button>
+            </form></div>
+        </div>
+
+        <div id="modal-gopy" class="modal-content hidden bg-white rounded-3xl w-full max-w-md mx-auto my-auto overflow-hidden shadow-2xl">
+            <div class="bg-yellow-500 p-5 flex justify-between text-white"><h3 class="font-bold text-xl"><i class="fas fa-comment-medical mr-2"></i> Góp ý & Phản ánh</h3><button onclick="window.closeModal()"><i class="fas fa-times"></i></button></div>
+            <div class="p-6"><form onsubmit="window.submitForm(event)">
+                <textarea required rows="4" class="w-full border-2 border-yellow-200 rounded-xl px-4 py-3 mb-3" placeholder="Nhập ý kiến đóng góp của bà con..."></textarea>
+                <button type="submit" class="w-full bg-yellow-500 text-white font-bold py-3.5 rounded-xl shadow-md">Gửi ý kiến</button>
+            </form></div>
+        </div>
+
+        <div id="modal-tracuuketqua" class="modal-content hidden bg-white rounded-3xl w-full max-w-md mx-auto my-auto overflow-hidden shadow-2xl">
+            <div class="bg-blue-600 p-5 flex justify-between text-white"><h3 class="font-bold text-xl"><i class="fas fa-clipboard-check mr-2"></i> Tra cứu Kết quả</h3><button onclick="window.closeModal()"><i class="fas fa-times"></i></button></div>
+            <div class="p-6"><form onsubmit="window.lookupResultAI(event)">
+                <input type="text" id="lookup-id" required class="w-full border-2 border-blue-200 rounded-xl px-4 py-3 mb-3 font-bold uppercase" placeholder="Nhập số thẻ BHYT / CCCD">
+                <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3.5 rounded-xl shadow-md">Tìm kiếm hồ sơ</button>
+                <div id="lookup-result-box" class="mt-4 hidden"></div>
+            </form></div>
+        </div>
+
+        <div id="modal-tailieu" class="modal-content hidden bg-white rounded-3xl w-full max-w-lg mx-auto my-auto overflow-hidden shadow-2xl">
+            <div class="bg-indigo-600 p-5 flex justify-between text-white"><h3 class="font-bold text-xl"><i class="fas fa-folder-open mr-2"></i> <span id="docs-modal-title">Kho Tài liệu</span></h3><button onclick="window.closeModal()"><i class="fas fa-times"></i></button></div>
+            <div class="p-6 bg-gray-50 min-h-[300px] max-h-[60vh] overflow-y-auto" id="docs-modal-list"></div>
+        </div>
+
+        <div id="modal-video" class="modal-content hidden bg-white rounded-3xl w-full max-w-lg mx-auto my-auto overflow-hidden shadow-2xl">
+            <div class="bg-red-600 p-5 flex justify-between text-white"><h3 class="font-bold text-xl"><i class="fab fa-youtube mr-2"></i> Video Y Khoa</h3><button onclick="window.closeModal()"><i class="fas fa-times"></i></button></div>
+            <div class="p-8 text-center bg-gray-50"><i class="fas fa-photo-video text-6xl text-gray-300 mb-4"></i><h4 class="font-bold text-gray-600">Đang cập nhật luồng Video</h4></div>
+        </div>
+
+        <div id="modal-tuvansuckhoe" class="modal-content hidden bg-white rounded-3xl w-full max-w-md mx-auto my-auto overflow-hidden shadow-2xl">
+            <div class="bg-teal-600 p-5 flex justify-between text-white"><h3 class="font-bold text-xl"><i class="fas fa-headset mr-2"></i> Dinh dưỡng AI</h3><button onclick="window.closeModal()"><i class="fas fa-times"></i></button></div>
+            <div class="p-6">
+                <textarea id="health-condition" rows="3" class="w-full border-2 border-teal-200 rounded-xl px-4 py-3 mb-3" placeholder="Nhập bệnh lý (VD: Tiểu đường, Gút...)"></textarea>
+                <button onclick="window.askExpertAI('Dinh dưỡng')" class="w-full bg-teal-600 text-white font-bold py-3.5 rounded-xl shadow-md">✨ Nhận thực đơn AI</button>
+            </div>
+        </div>
+
+        <div id="modal-admin-login" class="modal-content hidden bg-white rounded-3xl w-full max-w-md mx-auto my-auto overflow-hidden shadow-2xl">
+            <div class="bg-gray-900 p-5 flex justify-between text-white"><h3 class="font-bold text-xl">Đăng nhập Admin CMS</h3><button onclick="window.closeModal()"><i class="fas fa-times"></i></button></div>
+            <div class="p-6"><form onsubmit="window.handleAdminLogin(event)">
+                <input type="email" id="admin-username" required class="w-full border-2 rounded-xl px-4 py-3 mb-3" placeholder="Email công vụ (tytbatxat@laocai.gov.vn)">
+                <input type="password" id="admin-password" required class="w-full border-2 rounded-xl px-4 py-3 mb-3" placeholder="Mật khẩu (admin123)">
+                <button type="submit" class="w-full bg-gray-900 text-white font-bold py-3.5 rounded-xl shadow-md">Xác thực hệ thống</button>
+            </form></div>
+        </div>
+
+        <!-- CÁC MODAL AI ĐẶC BIỆT -->
+        <div id="modal-aivision" class="modal-content hidden bg-white rounded-3xl w-full max-w-lg mx-auto my-auto overflow-hidden shadow-2xl">
+            <div class="bg-gradient-to-r from-blue-600 to-cyan-500 p-5 flex justify-between items-center text-white"><h3 class="font-bold text-xl"><i class="fas fa-camera mr-2"></i> Đọc Ảnh Y khoa AI</h3><button onclick="window.closeModal()"><i class="fas fa-times"></i></button></div>
+            <div class="p-6">
+                <div class="bg-blue-50 text-blue-800 text-sm p-3 rounded-xl mb-4 font-medium"><i class="fas fa-info-circle mr-1"></i> Tải ảnh đơn thuốc hoặc vỉ thuốc để Bác sĩ AI phân tích và dịch kết quả.</div>
+                <input type="file" id="aivision-file" accept="image/*" onchange="window.previewAIVisionImage(event)" class="w-full mb-3 cursor-pointer text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
+                <div id="aivision-preview-container" class="hidden text-center bg-gray-50 p-3 rounded-2xl border border-gray-200 mb-3"><img id="aivision-preview" class="max-h-40 rounded-xl mx-auto shadow-sm" /></div>
+                <button onclick="window.analyzeImageAI()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl shadow-md transition">✨ Phân tích ảnh</button>
+                <div id="aivision-result" class="mt-4 markdown-body hidden text-sm bg-blue-50 p-4 rounded-xl border border-blue-100 max-h-60 overflow-y-auto"></div>
+            </div>
+        </div>
+        
+        <div id="modal-aidich" class="modal-content hidden bg-white rounded-3xl w-full max-w-lg mx-auto my-auto overflow-hidden shadow-2xl">
+            <div class="bg-gradient-to-r from-teal-600 to-green-500 p-5 flex justify-between items-center text-white"><h3 class="font-bold text-xl"><i class="fas fa-language mr-2"></i> Dịch thuật Y khoa AI</h3><button onclick="window.closeModal()"><i class="fas fa-times"></i></button></div>
+            <div class="p-6">
+                <div class="bg-teal-50 text-teal-800 text-sm p-3 rounded-xl mb-4 font-medium"><i class="fas fa-info-circle mr-1"></i> Bà con không hiểu chữ bác sĩ ghi trong sổ khám? Hãy nhập vào đây, AI sẽ "dịch" lại sang ngôn ngữ mộc mạc nhất!</div>
+                <textarea id="ai-translate-input" rows="3" class="w-full border-2 border-teal-200 rounded-xl px-4 py-3 mb-3 focus:ring-2 focus:ring-teal-100 outline-none" placeholder="Nhập thuật ngữ y khoa (VD: Rối loạn lipid máu)..."></textarea>
+                <button onclick="window.translateMedicalAI()" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3.5 rounded-xl shadow-md transition">✨ Dịch sang tiếng bình dân</button>
+                <div id="ai-translate-result" class="mt-4 markdown-body hidden text-sm bg-teal-50 p-4 rounded-xl border border-teal-100 max-h-60 overflow-y-auto"></div>
+            </div>
+        </div>
+        
+        <div id="modal-chiso" class="modal-content hidden bg-white rounded-3xl w-full max-w-lg mx-auto my-auto overflow-hidden shadow-2xl">
+            <div class="bg-gradient-to-r from-indigo-500 to-blue-500 p-5 flex justify-between items-center text-white"><h3 class="font-bold text-xl"><i class="fas fa-file-medical-alt mr-2"></i> Đọc chỉ số Sức khỏe AI</h3><button onclick="window.closeModal()"><i class="fas fa-times"></i></button></div>
+            <div class="p-6">
+                <div class="bg-indigo-50 text-indigo-800 text-sm p-3 rounded-xl mb-4 font-medium"><i class="fas fa-info-circle mr-1"></i> Nhập chỉ số đo được tại nhà, Bác sĩ AI sẽ giải thích ý nghĩa.</div>
+                <textarea id="vitals-input" rows="3" class="w-full border-2 border-indigo-200 rounded-xl px-4 py-3 mb-3 focus:ring-2 focus:ring-indigo-100 outline-none" placeholder="Ví dụ: Huyết áp 145/90, Đường huyết 7.2 mmol/L..."></textarea>
+                <button onclick="window.analyzeVitalsAI()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3.5 rounded-xl shadow-md transition">✨ Phân tích chỉ số</button>
+                <div id="vitals-result" class="mt-4 markdown-body hidden text-sm bg-indigo-50 p-4 rounded-xl border border-indigo-100 max-h-60 overflow-y-auto"></div>
+            </div>
+        </div>
+        
+        <div id="modal-tracuuthuoc" class="modal-content hidden bg-white rounded-3xl w-full max-w-lg mx-auto my-auto overflow-hidden shadow-2xl">
+            <div class="bg-gradient-to-r from-violet-500 to-purple-500 p-5 flex justify-between items-center text-white"><h3 class="font-bold text-xl"><i class="fas fa-pills mr-2"></i> Tra cứu Thuốc AI</h3><button onclick="window.closeModal()"><i class="fas fa-times"></i></button></div>
+            <div class="p-6">
+                <div class="bg-violet-50 text-violet-800 text-sm p-3 rounded-xl mb-4 font-medium"><i class="fas fa-info-circle mr-1"></i> Dược sĩ AI sẽ giúp bà con hiểu rõ công dụng và lưu ý của thuốc.</div>
+                <input type="text" id="ai-med-input" class="w-full border-2 border-violet-200 rounded-xl px-4 py-3 mb-3 focus:ring-2 focus:ring-violet-100 outline-none" placeholder="Nhập tên thuốc (VD: Paracetamol, Amoxicillin)...">
+                <button onclick="window.lookupMedicineAI()" class="w-full bg-violet-600 hover:bg-violet-700 text-white font-bold py-3.5 rounded-xl shadow-md transition">✨ Hỏi Dược sĩ AI</button>
+                <div id="ai-med-result" class="mt-4 markdown-body hidden text-sm bg-violet-50 p-4 rounded-xl border border-violet-100 max-h-60 overflow-y-auto"></div>
+            </div>
+        </div>
+        
+        <div id="modal-lichuongthuoc" class="modal-content hidden bg-white rounded-3xl w-full max-w-lg mx-auto my-auto overflow-hidden shadow-2xl">
+            <div class="bg-gradient-to-r from-fuchsia-500 to-pink-500 p-5 flex justify-between items-center text-white"><h3 class="font-bold text-xl"><i class="fas fa-calendar-plus mr-2"></i> Lên lịch Thuốc AI</h3><button onclick="window.closeModal()"><i class="fas fa-times"></i></button></div>
+            <div class="p-6">
+                <div class="bg-fuchsia-50 text-fuchsia-800 text-sm p-3 rounded-xl mb-4 font-medium"><i class="fas fa-info-circle mr-1"></i> Nhập danh sách thuốc, AI sẽ tự tạo bảng biểu uống thuốc rõ ràng.</div>
+                <textarea id="med-schedule-input" rows="3" class="w-full border-2 border-fuchsia-200 rounded-xl px-4 py-3 mb-3 focus:ring-2 focus:ring-fuchsia-100 outline-none" placeholder="Ví dụ: Panadol ngày 2 viên sáng tối, Vitamin C 1 viên sáng..."></textarea>
+                <button onclick="window.generateMedScheduleAI()" class="w-full bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-bold py-3.5 rounded-xl shadow-md transition">✨ Tạo Lịch Uống Thuốc</button>
+                <div id="med-schedule-result" class="mt-4 markdown-body hidden text-sm bg-fuchsia-50 p-4 rounded-xl border border-fuchsia-100 max-h-60 overflow-y-auto"></div>
+            </div>
+        </div>
+        
+        <div id="modal-caythuoc" class="modal-content hidden bg-white rounded-3xl w-full max-w-lg mx-auto my-auto overflow-hidden shadow-2xl">
+            <div class="bg-gradient-to-r from-green-600 to-lime-500 p-5 flex justify-between items-center text-white"><h3 class="font-bold text-xl"><i class="fas fa-leaf mr-2"></i> Hỏi đáp Cây thuốc AI</h3><button onclick="window.closeModal()"><i class="fas fa-times"></i></button></div>
+            <div class="p-6">
+                <div class="bg-green-50 text-green-800 text-sm p-3 rounded-xl mb-4 font-medium"><i class="fas fa-info-circle mr-1"></i> Chụp ảnh thảo dược để Chuyên gia AI phân tích công dụng.</div>
+                <input type="file" id="caythuoc-file" accept="image/*" onchange="window.previewCayThuocImage(event)" class="w-full mb-3 cursor-pointer text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-semibold file:bg-green-50 file:text-green-700 hover:file:bg-green-100">
+                <div id="caythuoc-preview-container" class="hidden text-center bg-gray-50 p-3 rounded-2xl border border-gray-200 mb-3"><img id="caythuoc-preview" class="max-h-40 rounded-xl mx-auto shadow-sm" /></div>
+                <button onclick="window.analyzeHerbalAI()" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3.5 rounded-xl shadow-md transition">✨ Nhận Diện Cây Thuốc</button>
+                <div id="caythuoc-result" class="mt-4 markdown-body hidden text-sm bg-green-50 p-4 rounded-xl border border-green-100 max-h-60 overflow-y-auto"></div>
+            </div>
+        </div>
+        
+        <div id="modal-socuu" class="modal-content hidden bg-white rounded-3xl w-full max-w-lg mx-auto my-auto overflow-hidden shadow-2xl">
+            <div class="bg-gradient-to-r from-red-500 to-orange-500 p-5 flex justify-between items-center text-white"><h3 class="font-bold text-xl"><i class="fas fa-briefcase-medical mr-2"></i> Sơ cứu Khẩn cấp AI</h3><button onclick="window.closeModal()"><i class="fas fa-times"></i></button></div>
+            <div class="p-6">
+                <div class="bg-red-50 text-red-800 text-sm p-3 rounded-xl mb-4 font-bold"><i class="fas fa-exclamation-triangle mr-1 animate-pulse"></i> Hãy mô tả tình huống khẩn cấp, AI sẽ hướng dẫn bước sơ cứu ngay!</div>
+                <input type="text" id="ai-firstaid-input" class="w-full border-2 border-red-200 rounded-xl px-4 py-3 mb-3 focus:ring-2 focus:ring-red-100 outline-none" placeholder="Nhập tình trạng (VD: Bị rắn cắn, Hóc dị vật)...">
+                <button onclick="window.firstAidAI()" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 rounded-xl shadow-md transition">✨ Hướng dẫn Sơ cứu ngay</button>
+                <div id="ai-firstaid-result" class="mt-4 markdown-body hidden text-sm bg-red-50 p-4 rounded-xl border border-red-100 max-h-60 overflow-y-auto"></div>
+            </div>
+        </div>
+
+        <div id="modal-tuongtacthuoc" class="modal-content hidden bg-white rounded-3xl w-full max-w-lg mx-auto my-auto overflow-hidden shadow-2xl">
+            <div class="bg-gradient-to-r from-rose-500 to-red-600 p-5 flex justify-between items-center text-white"><h3 class="font-bold text-xl"><i class="fas fa-exclamation-triangle mr-2"></i> Sàng lọc Tương tác Thuốc</h3><button onclick="window.closeModal()"><i class="fas fa-times"></i></button></div>
+            <div class="p-6">
+                <div class="bg-rose-50 text-rose-800 text-sm p-3 rounded-xl mb-4 font-medium"><i class="fas fa-info-circle mr-1"></i> Bà con nhập các loại thuốc Tây, lá Nam đang uống chung vào đây để AI kiểm tra xem chúng có "đánh nhau" hay sinh ra độc tính không nhé.</div>
+                <textarea id="ai-interaction-input" rows="3" class="w-full border-2 border-rose-200 rounded-xl px-4 py-3 mb-3 focus:ring-2 focus:ring-rose-100 outline-none" placeholder="Ví dụ: Uống thuốc tiểu đường Metformin chung với nước lá sâm đất..."></textarea>
+                <button onclick="window.checkDrugInteractionsAI()" class="w-full bg-rose-600 hover:bg-rose-700 text-white font-bold py-3.5 rounded-xl shadow-md transition">✨ Kiểm Tra An Toàn Ngay</button>
+                <div id="ai-interaction-result" class="mt-4 markdown-body hidden text-sm bg-rose-50 p-4 rounded-xl border border-rose-100 max-h-60 overflow-y-auto"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Toast -->
+    <div id="toast-notification" class="fixed top-5 right-5 bg-gray-900 text-white px-6 py-4 rounded-2xl shadow-2xl transform translate-x-full opacity-0 z-[100] transition-all"><span id="toast-message" class="font-bold text-sm"></span></div>
+
+    <!-- ================= GIAO DIỆN ADMIN CMS ================= -->
+    <div id="admin-dashboard" class="hidden min-h-screen bg-gray-100 flex flex-col font-sans relative z-50">
+        <header class="bg-gray-900 text-white p-4 shadow-xl flex justify-between items-center z-50 sticky top-0">
+            <div class="flex items-center gap-3">
+                <h1 class="font-black text-xl text-medical-300 tracking-wider">CMS BÁT XÁT</h1>
+                <span id="cloud-status" class="bg-green-500 text-white text-[10px] px-2 py-0.5 rounded-full font-bold uppercase animate-pulse">Bộ nhớ cục bộ (Local)</span>
+            </div>
+            <button onclick="window.logoutAdmin()" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg text-sm font-bold shadow-md transition">Đăng xuất</button>
+        </header>
+        
+        <div class="flex-1 flex max-w-[1400px] mx-auto w-full p-4 gap-6 mt-2">
+            <div class="w-72 bg-white rounded-2xl shadow-sm p-5 border border-gray-200 hidden md:block h-fit">
+                <ul class="space-y-2">
+                    <li><button onclick="window.switchAdminTab('news')" id="tab-btn-news" class="w-full text-left p-3.5 bg-medical-50 text-medical-700 rounded-xl font-bold border-l-4 border-medical-600"><i class="fas fa-newspaper mr-3"></i> Quản lý Tin tức</button></li>
+                    <li><button onclick="window.switchAdminTab('vaccine')" id="tab-btn-vaccine" class="w-full text-left p-3.5 text-gray-600 hover:bg-gray-50 rounded-xl font-bold border-l-4 border-transparent"><i class="fas fa-syringe mr-3"></i> Lịch tiêm chủng</button></li>
+                    <li><button onclick="window.switchAdminTab('docs')" id="tab-btn-docs" class="w-full text-left p-3.5 text-gray-600 hover:bg-gray-50 rounded-xl font-bold border-l-4 border-transparent"><i class="fas fa-file-pdf mr-3"></i> Biểu mẫu / Tài liệu</button></li>
+                    <li><button onclick="window.switchAdminTab('service')" id="tab-btn-service" class="w-full text-left p-3.5 text-gray-600 hover:bg-gray-50 rounded-xl font-bold border-l-4 border-transparent"><i class="fas fa-list mr-3"></i> Quản lý Khoa / Zalo</button></li>
+                    <li><button onclick="window.switchAdminTab('users')" id="tab-btn-users" class="w-full text-left p-3.5 text-gray-600 hover:bg-gray-50 rounded-xl font-bold border-l-4 border-transparent"><i class="fas fa-users-cog mr-3"></i> Cán bộ / Phân quyền</button></li>
+                </ul>
+            </div>
+            
+            <div class="flex-1 space-y-6 overflow-hidden">
+                <!-- TAB NEWS -->
+                <div id="admin-news" class="admin-tab active space-y-6">
+                    <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-200">
+                        <h2 class="text-2xl font-black text-gray-900 mb-6">Đăng Bản Tin & Cảnh Báo</h2>
+                        <form onsubmit="window.adminAddNews(event)">
+                            <input type="text" id="an-title" required class="w-full border-2 rounded-xl px-4 py-3 mb-3" placeholder="Tiêu đề bản tin...">
+                            <textarea id="an-desc" required rows="3" class="w-full border-2 rounded-xl px-4 py-3 mb-3" placeholder="Nội dung chi tiết..."></textarea>
+                            <button type="submit" class="bg-medical-600 text-white font-bold px-6 py-3 rounded-xl">Đăng bài viết</button>
+                        </form>
+                        <div class="mt-6 border-t pt-4">
+                            <table class="w-full text-left"><tbody id="admin-news-list" class="divide-y"></tbody></table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB VACCINE -->
+                <div id="admin-vaccine" class="admin-tab space-y-6">
+                    <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-200">
+                        <h2 class="text-2xl font-black text-gray-900 mb-6">Quản lý Lịch Tiêm Chủng</h2>
+                        <form onsubmit="window.adminAddVaccine(event)">
+                            <div class="grid grid-cols-2 gap-4 mb-3">
+                                <input type="text" id="av-date" required class="border-2 rounded-xl px-4 py-3" placeholder="Thời gian (VD: Sáng 05/06/2026)">
+                                <input type="text" id="av-target" required class="border-2 rounded-xl px-4 py-3" placeholder="Thôn bản (VD: Thôn 1, 2, 3)">
+                            </div>
+                            <button type="submit" class="bg-green-600 text-white font-bold px-6 py-3 rounded-xl">Thêm lịch tiêm</button>
+                        </form>
+                        <div class="mt-6 border-t pt-4">
+                            <table class="w-full text-left"><tbody id="admin-vaccine-list" class="divide-y"></tbody></table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB DOCS -->
+                <div id="admin-docs" class="admin-tab space-y-6">
+                    <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-200">
+                        <h2 class="text-2xl font-black text-gray-900 mb-6">Kho Biểu mẫu & Tài liệu</h2>
+                        <form onsubmit="window.adminAddDoc(event)">
+                            <input type="text" id="ad-title" required class="w-full border-2 rounded-xl px-4 py-3 mb-3" placeholder="Tên tài liệu...">
+                            <div class="grid grid-cols-2 gap-4 mb-3">
+                                <select id="ad-type" class="border-2 rounded-xl px-4 py-3 bg-white"><option value="Biểu mẫu y tế">Biểu mẫu y tế</option><option value="Tài liệu y tế">Tài liệu y tế</option></select>
+                                <input type="url" id="ad-url" required class="border-2 rounded-xl px-4 py-3" placeholder="Link tải tài liệu...">
+                            </div>
+                            <button type="submit" class="bg-blue-600 text-white font-bold px-6 py-3 rounded-xl">Tải tài liệu lên</button>
+                        </form>
+                        <div class="mt-6 border-t pt-4">
+                            <table class="w-full text-left"><tbody id="admin-docs-list" class="divide-y"></tbody></table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB SERVICES -->
+                <div id="admin-service" class="admin-tab space-y-6">
+                    <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-200">
+                        <h2 class="text-2xl font-black text-gray-900 mb-6">Quản lý Khoa Phòng & Danh bạ</h2>
+                        <form onsubmit="window.adminAddService(event)">
+                            <div class="grid grid-cols-3 gap-4 mb-3">
+                                <input type="text" id="as-name" required class="border-2 rounded-xl px-4 py-3" placeholder="Chức danh / Khoa">
+                                <input type="text" id="as-person" required class="border-2 rounded-xl px-4 py-3" placeholder="Tên cán bộ">
+                                <input type="tel" id="as-zalo" required class="border-2 rounded-xl px-4 py-3" placeholder="Số điện thoại / Zalo">
+                            </div>
+                            <button type="submit" class="bg-indigo-600 text-white font-bold px-6 py-3 rounded-xl">Thêm Cán bộ</button>
+                        </form>
+                        <div class="mt-6 border-t pt-4">
+                            <table class="w-full text-left"><tbody id="admin-service-list" class="divide-y"></tbody></table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB USERS -->
+                <div id="admin-users" class="admin-tab space-y-6">
+                    <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-200">
+                        <h2 class="text-2xl font-black text-gray-900 mb-6">Tài khoản Quản trị</h2>
+                        <form onsubmit="window.adminAddUser(event)">
+                            <div class="grid grid-cols-2 gap-4 mb-3">
+                                <input type="email" id="au-email" required class="border-2 rounded-xl px-4 py-3" placeholder="Email đăng nhập">
+                                <input type="text" id="au-name" required class="border-2 rounded-xl px-4 py-3" placeholder="Họ và tên">
+                            </div>
+                            <button type="submit" class="bg-gray-800 text-white font-bold px-6 py-3 rounded-xl">Cấp quyền</button>
+                        </form>
+                        <div class="mt-6 border-t pt-4">
+                            <table class="w-full text-left"><tbody id="admin-user-list" class="divide-y"></tbody></table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= SCRIPT ENGINE (FULL MODULE) ================= -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // 1. DATA STATE (LOCAL FALLBACK)
+        let serviceManagers = [
+            { id: 'S1', name: 'Trạm trưởng', person: 'BSCKI. Nguyễn Văn A', zalo: '0382103002' },
+            { id: 'S2', name: 'Phụ trách Đông Y', person: 'Y sĩ Lý Thị B', zalo: '0382103002' },
+            { id: 'S3', name: 'Phụ trách Sản - Nhi', person: 'NHS. Chảo Mùi C', zalo: '0382103002' }
+        ];
+
+        let adminUsers = [{ id: 'U1', username: 'tytbatxat@laocai.gov.vn', name: 'Quản trị viên', role: 'Admin' }];
+        
+        let newsData = [
+            { id: 3, title: 'Cảnh báo dịch sốt xuất huyết mùa mưa', description: 'Trạm Y tế Bát Xát khuyến cáo bà con thường xuyên diệt bọ gậy, dọn dẹp vật dụng chứa nước đọng và ngủ màn.', date: '28/05/2026', icon: 'fa-mosquito', color: 'red' },
+            { id: 2, title: 'Quy trình Khám BHYT bằng VNeID', description: 'Vui lòng mang theo Căn cước công dân gắn chíp hoặc ứng dụng VNeID mức độ 2 khi đến khám. Cán bộ y tế sẽ quét mã đăng ký tự động.', date: '20/05/2026', icon: 'fa-id-card', color: 'blue' }
+        ]; 
+        
+        let documentsData = [
+            { id: 'D1', title: 'Mẫu Giấy chuyển tuyến BHYT', type: 'Biểu mẫu y tế', url: '#', date: '26/05/2026' },
+            { id: 'D2', title: 'Hướng dẫn phòng Sốt Rét', type: 'Tài liệu y tế', url: '#', date: '25/05/2026' }
+        ];
+        
+        let vaccineScheduleData = [
+            { id: 'V1', date: 'Sáng 05/06/2026', target: 'Trẻ em: Thôn 1, 2, 3, 4, 5' },
+            { id: 'V2', date: 'Sáng 06/06/2026', target: 'Trẻ em: Thôn 6, 7, 8, 9, 10' }
+        ];
+
+        // 2. FIREBASE INIT
+        const fcfg = typeof __firebase_config !== 'undefined' ? __firebase_config : null;
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'tytbatxat-prod';
+        let db, auth;
+
+        if(fcfg) {
+            try {
+                const appInstance = initializeApp(JSON.parse(fcfg));
+                auth = getAuth(appInstance);
+                db = getFirestore(appInstance);
+                
+                const initAuth = async () => {
+                    try {
+                        if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                            await signInWithCustomToken(auth, __initial_auth_token);
+                        } else {
+                            await signInAnonymously(auth);
+                        }
+                    } catch(err) { console.warn("Lỗi xác thực Auth"); }
+                };
+                initAuth();
+
+                onAuthStateChanged(auth, user => {
+                    if(!user) return;
+                    document.getElementById('cloud-status').innerText = "Đám mây Đồng bộ";
+                    onSnapshot(collection(db, 'artifacts', appId, 'public', 'data', 'news'), snap => {
+                        let tempNews = []; snap.forEach(d => tempNews.push({id: d.id, ...d.data()}));
+                        if(tempNews.length > 0) { newsData = tempNews; window.renderAll(); window.renderAdminAll(); }
+                    }, (err) => console.error("Lỗi cấp quyền Snapshot"));
+                });
+            } catch(e) { console.warn("Fallback Local Mode"); }
+        }
+
+        // 3. UI HELPERS & ROUTING
+        window.switchPage = function(page) {
+            const home = document.getElementById('trang-chu-container');
+            const dept = document.getElementById('khoa-phong-container');
+            const navHome = document.getElementById('nav-home');
+            const navDept = document.getElementById('nav-dept');
+
+            if(page === 'home') {
+                home.classList.remove('hidden'); dept.classList.add('hidden');
+                if(navHome) { navHome.classList.add('border-medical-600','text-medical-600'); navDept.classList.remove('border-medical-600','text-medical-600'); }
+            } else if (page === 'dept') {
+                home.classList.add('hidden'); dept.classList.remove('hidden');
+                if(navDept) { navDept.classList.add('border-medical-600','text-medical-600'); navHome.classList.remove('border-medical-600','text-medical-600'); }
+            }
+            window.scrollTo(0,0);
+        };
+
+        window.switchFrontendTab = function(tabId, event) {
+            document.querySelectorAll('.frontend-tab-content').forEach(c => { c.classList.remove('block'); c.classList.add('hidden'); });
+            document.querySelectorAll('.frontend-tab-btn').forEach(b => { b.classList.remove('border-medical-600', 'text-medical-700', 'border-purple-500', 'text-purple-600', 'font-black'); b.classList.add('border-transparent', 'text-gray-500', 'font-bold'); });
+            const target = document.getElementById(`tab-${tabId}`);
+            if(target) { target.classList.remove('hidden'); target.classList.add('block'); }
+            
+            if(event && event.currentTarget) {
+                event.currentTarget.classList.remove('border-transparent', 'text-gray-500', 'font-bold');
+                if(tabId === 'ai-hub') { event.currentTarget.classList.add('border-purple-500', 'text-purple-600', 'font-black'); }
+                else { event.currentTarget.classList.add('border-medical-600', 'text-medical-700', 'font-black'); }
+            }
+        };
+
+        window.openModal = function(id) {
+            document.getElementById('modal-overlay').classList.remove('hidden');
+            document.querySelectorAll('.modal-content').forEach(m => m.classList.add('hidden'));
+            const m = document.getElementById(id);
+            if(m) m.classList.remove('hidden');
+            
+            if(id === 'modal-danhba') {
+                document.getElementById('contact-list').innerHTML = serviceManagers.map(s => `
+                    <li class="p-4 border-b flex justify-between items-center"><div class="font-bold text-gray-800">${s.name}<br><span class="text-xs font-normal text-gray-500">${s.person}</span></div><a href="tel:${s.zalo}" class="bg-blue-100 text-blue-700 px-4 py-2 rounded-lg font-bold text-sm shadow-sm transition hover:bg-blue-600 hover:text-white"><i class="fas fa-phone-alt"></i> Gọi</a></li>
+                `).join('');
+            }
+            if(id === 'modal-datlich') {
+                document.getElementById('booking-dept').innerHTML = `<option value="" disabled selected>-- Chọn khoa khám --</option>` + serviceManagers.map(s => `<option value="${s.id}">${s.name}</option>`).join('');
+            }
+        };
+
+        window.closeModal = function() { document.getElementById('modal-overlay').classList.add('hidden'); };
+
+        window.showToast = function(msg) {
+            const toast = document.getElementById('toast-notification');
+            document.getElementById('toast-message').textContent = msg;
+            toast.classList.remove('translate-x-full', 'opacity-0');
+            setTimeout(() => toast.classList.add('translate-x-full', 'opacity-0'), 3000);
+        };
+
+        window.openSupportModal = function(topic) {
+            document.getElementById('support-topic').value = topic;
+            document.getElementById('support-title').innerText = topic;
+            document.getElementById('support-result').classList.add('hidden');
+            window.openModal('modal-hotrochuyenmon');
+        };
+
+        window.openDocsModal = function(type) {
+            document.getElementById('docs-modal-title').textContent = type;
+            const list = documentsData.filter(d => d.type === type);
+            const container = document.getElementById('docs-modal-list');
+            if(list.length === 0) container.innerHTML = '<div class="text-center py-6 text-gray-500">Chưa có tài liệu</div>';
+            else container.innerHTML = list.map(d => `<div class="p-4 border-b flex justify-between"><div class="font-bold text-blue-900"><i class="fas fa-file-pdf text-red-500 mr-2"></i>${d.title}</div><a href="${d.url}" class="bg-gray-100 px-3 py-1 rounded font-bold text-sm">Tải về</a></div>`).join('');
+            window.openModal('modal-tailieu');
+        };
+
+        // 4. RENDER FRONTEND
+        window.renderAll = function() {
+            // Render News with TTS
+            const nCont = document.getElementById('news-container');
+            if(nCont) nCont.innerHTML = newsData.map(n => `
+                <div class="flex gap-4 bg-white p-4 rounded-2xl border border-gray-100 shadow-sm transition hover:border-${n.color||'medical'}-300 relative">
+                    <div class="w-12 h-12 bg-${n.color||'medical'}-100 rounded-xl flex items-center justify-center text-${n.color||'medical'}-600 text-xl shrink-0"><i class="fas ${n.icon||'fa-bullhorn'}"></i></div>
+                    <div class="flex-1">
+                        <h4 class="font-bold text-gray-900 leading-tight mb-1">${n.title}</h4>
+                        ${n.description ? `<p class="text-sm text-gray-600 mb-2 line-clamp-2">${n.description}</p>` : ''}
+                        <div class="flex items-center justify-between mt-2 pt-2 border-t border-gray-50">
+                            <p class="text-xs text-gray-500"><i class="far fa-clock"></i> ${n.date}</p>
+                            <button onclick="window.readNewsAloud(${n.id}, this)" class="text-[11px] bg-blue-50 text-blue-600 px-3 py-1.5 rounded-lg font-bold hover:bg-blue-600 hover:text-white transition shadow-sm"><i class="fas fa-volume-up"></i> Nghe AI</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Render Vaccine Public
+            const vl = document.getElementById('public-vaccine-list');
+            if(vl) vl.innerHTML = vaccineScheduleData.map(v => `<tr class="border-b"><td class="p-4 font-bold whitespace-nowrap">${v.date}</td><td class="p-4 text-sm font-medium text-gray-700">${v.target}</td></tr>`).join('');
+        };
+
+        // 5. TRỢ LÝ AI (GEMINI)
+        const apiKey = ""; 
+        async function callGemini(prompt, sys) {
+            const payload = { contents: [{parts:[{text:prompt}]}], systemInstruction: {parts:[{text:sys}]} };
+            const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)});
+            if(!res.ok) throw new Error();
+            const data = await res.json(); return data.candidates[0].content.parts[0].text;
+        }
+
+        // --- TTS MODULE ---
+        function pcmBase64ToWav(base64, sampleRate = 24000) {
+            const binaryString = window.atob(base64);
+            const len = binaryString.length;
+            const bytes = new Uint8Array(len);
+            for (let i = 0; i < len; i++) { bytes[i] = binaryString.charCodeAt(i); }
+            const wavBuffer = new ArrayBuffer(44 + len);
+            const view = new DataView(wavBuffer);
+            const writeString = (view, offset, string) => { for (let i = 0; i < string.length; i++) { view.setUint8(offset + i, string.charCodeAt(i)); } };
+            writeString(view, 0, 'RIFF'); view.setUint32(4, 36 + len, true); writeString(view, 8, 'WAVE'); writeString(view, 12, 'fmt ');
+            view.setUint32(16, 16, true); view.setUint16(20, 1, true); view.setUint16(22, 1, true); view.setUint32(24, sampleRate, true);
+            view.setUint32(28, sampleRate * 2, true); view.setUint16(32, 2, true); view.setUint16(34, 16, true); writeString(view, 36, 'data'); view.setUint32(40, len, true);
+            new Uint8Array(wavBuffer, 44).set(bytes);
+            return URL.createObjectURL(new Blob([view], { type: 'audio/wav' }));
+        }
+
+        window.currentAudio = null;
+        window.readNewsAloud = async function(newsId, btn) {
+            const news = newsData.find(n => n.id === newsId); if(!news) return;
+            if(window.currentAudio) { window.currentAudio.pause(); window.currentAudio = null; }
+            
+            const originalHtml = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Đang tải...'; btn.disabled = true;
+
+            try {
+                const textToRead = `${news.title}. ${news.description || ''}`;
+                const payload = { contents: [{ parts: [{ text: textToRead }] }], generationConfig: { responseModalities: ["AUDIO"], speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: "Aoede" } } } }, model: "gemini-2.5-flash-preview-tts" };
+                const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+                const data = await res.json();
+                const inlineData = data.candidates[0].content.parts[0].inlineData;
+                window.currentAudio = new Audio(pcmBase64ToWav(inlineData.data, 24000));
+                window.currentAudio.play();
+                
+                btn.innerHTML = '<i class="fas fa-volume-up fa-beat"></i> Đang đọc';
+                btn.classList.add('bg-blue-600', 'text-white');
+                window.currentAudio.onended = () => { btn.innerHTML = originalHtml; btn.disabled = false; btn.classList.remove('bg-blue-600', 'text-white'); };
+            } catch(e) { window.showToast("Lỗi tải giọng đọc!"); btn.innerHTML = originalHtml; btn.disabled = false; }
+        };
+
+        // --- FORM SUBMITS ---
+        window.submitForm = function(e) {
+            e.preventDefault(); e.target.innerHTML = `<div class="text-center py-6"><i class="fas fa-check-circle text-5xl text-green-500 mb-3"></i><h4 class="font-bold text-xl">Đã ghi nhận an toàn!</h4></div>`;
+        };
+        window.handleBookingSubmit = window.submitForm;
+        
+        window.lookupResultAI = function(e) {
+            e.preventDefault(); const id = document.getElementById('lookup-id').value;
+            const box = document.getElementById('lookup-result-box'); box.classList.remove('hidden');
+            box.innerHTML = `<div class="bg-gray-100 p-4 rounded-xl text-center"><i class="fas fa-spinner fa-spin text-blue-500"></i> Đang truy xuất...</div>`;
+            setTimeout(() => { box.innerHTML = `<div class="bg-green-50 p-4 rounded-xl border border-green-200 text-sm">Hồ sơ <b>${id.toUpperCase()}</b> đã có kết quả khám. Hãy mang sổ tới Phòng Hành chính Trạm để lấy bản cứng.</div>`; }, 1500);
+        };
+
+        // --- AI FEATURES LOGIC ---
+        window.askExpertAI = async function(overrideTopic) {
+            const topic = overrideTopic || document.getElementById('support-topic').value;
+            let q = document.getElementById('support-question') ? document.getElementById('support-question').value : "";
+            if(!q) q = "Cho tôi một lời khuyên về " + topic;
+            
+            const resDiv = document.getElementById('support-result');
+            resDiv.innerHTML = '<div class="text-center"><i class="fas fa-spinner fa-spin text-green-600 text-2xl mb-2"></i></div>'; resDiv.classList.remove('hidden');
+            try {
+                const ans = await callGemini(q, `Tư vấn sức khỏe mộc mạc, dễ hiểu cho người dân xã Bát Xát về: ${topic}. Dùng HTML.`);
+                resDiv.innerHTML = ans.replace(/```html/g, '').replace(/```/g, '');
+            } catch(e) { window.showToast("Lỗi kết nối AI!"); }
+        };
+
+        window.performAISearch = async function() {
+            const q = document.getElementById('global-ai-search-input').value;
+            const resDiv = document.getElementById('aisearch-result');
+            if(!q) return window.showToast("Nhập nội dung tìm kiếm!");
+            resDiv.innerHTML = '<div class="text-center"><i class="fas fa-spinner fa-spin text-purple-600 text-2xl mb-2"></i></div>'; resDiv.classList.remove('hidden');
+            try {
+                const ans = await callGemini(q, "Giải đáp ngắn gọn thủ tục y tế, hướng dẫn người dân vào các mục Khoa & Phòng trên web. Trình bày HTML đơn giản.");
+                resDiv.innerHTML = ans.replace(/```html/g, '').replace(/```/g, '');
+            } catch(e) { window.showToast("Lỗi mạng AI!"); }
+        };
+
+        window.generateDailyTipAI = async function() {
+            const el = document.getElementById('header-slogan');
+            el.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+            try {
+                const tip = await callGemini("Mẹo", "1 câu dưới 12 chữ khuyên sức khỏe người vùng núi. Không ngoặc kép.");
+                el.innerText = tip.replace(/["']/g, '');
+            } catch(e) { el.innerText = "Vì sức khỏe cộng đồng"; }
+        };
+
+        window.translateMedicalAI = async function() {
+            const q = document.getElementById('ai-translate-input').value;
+            const resDiv = document.getElementById('ai-translate-result');
+            if(!q) return window.showToast("Vui lòng nhập thuật ngữ!");
+            resDiv.innerHTML = '<div class="text-center text-teal-600"><i class="fas fa-spinner fa-spin text-2xl mb-2"></i><br>Đang giải nghĩa từ ngữ...</div>'; resDiv.classList.remove('hidden');
+            try {
+                const ans = await callGemini(`Dịch từ này: ${q}`, "Dịch thuật ngữ y khoa phức tạp sang ngôn ngữ bình dân, dân dã cho người già dễ hiểu. Dùng HTML.");
+                resDiv.innerHTML = ans.replace(/```html/g, '').replace(/```/g, '');
+            } catch(e) { window.showToast("Lỗi AI!"); }
+        };
+
+        window.lookupMedicineAI = async function() {
+            const q = document.getElementById('ai-med-input').value;
+            const resDiv = document.getElementById('ai-med-result');
+            if(!q) return window.showToast("Vui lòng nhập tên thuốc!");
+            resDiv.innerHTML = '<div class="text-center text-violet-600"><i class="fas fa-spinner fa-spin text-2xl mb-2"></i><br>Đang tra dược thư...</div>'; resDiv.classList.remove('hidden');
+            try {
+                const ans = await callGemini(`Công dụng thuốc: ${q}`, "Dược sĩ AI. Giải thích thuốc ngắn gọn, nêu tác dụng phụ. Luôn khuyên hỏi bác sĩ trước khi dùng. Dùng HTML <ul><li>.");
+                resDiv.innerHTML = ans.replace(/```html/g, '').replace(/```/g, '');
+            } catch(e) { window.showToast("Lỗi AI!"); }
+        };
+
+        window.firstAidAI = async function() {
+            const q = document.getElementById('ai-firstaid-input').value;
+            const resDiv = document.getElementById('ai-firstaid-result');
+            if(!q) return window.showToast("Vui lòng nhập tình trạng!");
+            resDiv.innerHTML = '<div class="text-center text-red-600"><i class="fas fa-spinner fa-spin text-2xl mb-2"></i><br>Đang tải cẩm nang cấp cứu...</div>'; resDiv.classList.remove('hidden');
+            try {
+                const ans = await callGemini(`Cấp cứu: ${q}`, "Chuyên gia cấp cứu. Hướng dẫn sơ cứu từng bước CỰC NGẮN. Yêu cầu gọi 115. Dùng HTML.");
+                resDiv.innerHTML = ans.replace(/```html/g, '').replace(/```/g, '');
+            } catch(e) { window.showToast("Lỗi AI!"); }
+        };
+
+        window.analyzeVitalsAI = async function() {
+            const q = document.getElementById('vitals-input').value;
+            const resDiv = document.getElementById('vitals-result');
+            if(!q) return window.showToast("Vui lòng nhập chỉ số!");
+            resDiv.innerHTML = '<div class="text-center text-indigo-600"><i class="fas fa-spinner fa-spin text-2xl mb-2"></i><br>Đang phân tích...</div>'; resDiv.classList.remove('hidden');
+            try {
+                const ans = await callGemini(`Chỉ số: ${q}`, "Bác sĩ phân tích chỉ số y tế tại nhà. Giải thích dễ hiểu xem bình thường hay nguy hiểm. Dùng HTML.");
+                resDiv.innerHTML = ans.replace(/```html/g, '').replace(/```/g, '');
+            } catch(e) { window.showToast("Lỗi AI!"); }
+        };
+
+        window.generateMedScheduleAI = async function() {
+            const q = document.getElementById('med-schedule-input').value;
+            const resDiv = document.getElementById('med-schedule-result');
+            if(!q) return window.showToast("Vui lòng nhập danh sách thuốc!");
+            resDiv.innerHTML = '<div class="text-center text-fuchsia-600"><i class="fas fa-spinner fa-spin text-2xl mb-2"></i><br>Đang kẻ bảng lịch uống...</div>'; resDiv.classList.remove('hidden');
+            try {
+                const ans = await callGemini(`Danh sách thuốc: ${q}`, "Kẻ BẢNG HTML (<table>) chia Sáng/Trưa/Chiều/Tối để lên lịch uống thuốc trực quan cho người già. Không dùng markdown fences.");
+                resDiv.innerHTML = ans.replace(/```html/g, '').replace(/```/g, '');
+            } catch(e) { window.showToast("Lỗi AI!"); }
+        };
+
+        window.checkDrugInteractionsAI = async function() {
+            const q = document.getElementById('ai-interaction-input').value;
+            const resDiv = document.getElementById('ai-interaction-result');
+            if(!q) return window.showToast("Vui lòng nhập danh sách thuốc!");
+            resDiv.innerHTML = '<div class="text-center text-rose-600"><i class="fas fa-spinner fa-spin text-2xl mb-2"></i><br>Dược sĩ đang kiểm tra tương tác...</div>'; resDiv.classList.remove('hidden');
+            try {
+                const ans = await callGemini(`Kiểm tra tương tác: ${q}`, "Đánh giá nguy cơ tương tác giữa thuốc Tây và lá thuốc Nam. Phân loại An toàn/Cẩn trọng/Nguy hiểm. Dùng HTML đơn giản.");
+                resDiv.innerHTML = ans.replace(/```html/g, '').replace(/```/g, '');
+            } catch(e) { window.showToast("Lỗi kết nối AI!"); }
+        };
+
+        // Vision Features
+        window.previewAIVisionImage = function(e) {
+            const file = e.target.files[0];
+            if(file) {
+                const reader = new FileReader();
+                reader.onload = e => { document.getElementById('aivision-preview').src = e.target.result; document.getElementById('aivision-preview-container').classList.remove('hidden'); };
+                reader.readAsDataURL(file);
+            }
+        };
+
+        window.analyzeImageAI = async function() {
+            const file = document.getElementById('aivision-file').files[0];
+            const resDiv = document.getElementById('aivision-result');
+            if(!file) return window.showToast("Vui lòng chọn ảnh!");
+            resDiv.innerHTML = '<div class="text-center text-blue-600"><i class="fas fa-spinner fa-spin text-2xl mb-2"></i><br>Bác sĩ đang xem ảnh...</div>'; resDiv.classList.remove('hidden');
+            const r = new FileReader();
+            r.onload = async function(e) {
+                const b64 = e.target.result.split(',')[1];
+                try {
+                    const payload = { contents: [{ role: "user", parts: [ { text: "Đọc ảnh y khoa này, giải thích dễ hiểu các chỉ số/đơn thuốc cho người bình thường." }, { inlineData: { mimeType: file.type, data: b64 } } ] }] };
+                    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) });
+                    const d = await res.json();
+                    resDiv.innerHTML = d.candidates[0].content.parts[0].text.replace(/```html/g, '').replace(/```/g, '');
+                } catch(er) { window.showToast("Lỗi phân tích ảnh!"); }
+            };
+            r.readAsDataURL(file);
+        };
+
+        window.previewCayThuocImage = function(e) {
+            const file = e.target.files[0];
+            if(file) {
+                const reader = new FileReader();
+                reader.onload = e => { document.getElementById('caythuoc-preview').src = e.target.result; document.getElementById('caythuoc-preview-container').classList.remove('hidden'); };
+                reader.readAsDataURL(file);
+            }
+        };
+
+        window.analyzeHerbalAI = async function() {
+            const file = document.getElementById('caythuoc-file').files[0];
+            const resDiv = document.getElementById('caythuoc-result');
+            if(!file) return window.showToast("Vui lòng tải ảnh cây cỏ!");
+            resDiv.innerHTML = '<div class="text-center text-green-600"><i class="fas fa-spinner fa-spin text-2xl mb-2"></i><br>Đang tra cứu từ điển thảo dược...</div>'; resDiv.classList.remove('hidden');
+            const r = new FileReader();
+            r.onload = async function(e) {
+                const b64 = e.target.result.split(',')[1];
+                try {
+                    const payload = { contents: [{ role: "user", parts: [ { text: "Nhận diện cây thuốc Nam này. Nêu công dụng và cảnh báo độc nếu có." }, { inlineData: { mimeType: file.type, data: b64 } } ] }] };
+                    const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload) });
+                    const d = await res.json();
+                    resDiv.innerHTML = d.candidates[0].content.parts[0].text.replace(/```html/g, '').replace(/```/g, '');
+                } catch(er) { window.showToast("Lỗi phân tích ảnh!"); }
+            };
+            r.readAsDataURL(file);
+        };
+
+        // 6. QUẢN TRỊ CMS (ADMIN PANEL)
+        window.handleAdminLogin = function(e) {
+            e.preventDefault();
+            const u = document.getElementById('admin-username').value;
+            const p = document.getElementById('admin-password').value;
+            if(u === 'tytbatxat@laocai.gov.vn' && p === 'admin123') {
+                window.closeModal(); document.getElementById('main-website').classList.add('hidden'); document.getElementById('admin-dashboard').classList.remove('hidden');
+                window.renderAdminAll();
+                window.showToast("Truy cập CMS Quản trị thành công!");
+            } else window.showToast("Sai Email hoặc Mật khẩu!");
+        };
+
+        window.logoutAdmin = function() {
+            document.getElementById('admin-dashboard').classList.add('hidden'); document.getElementById('main-website').classList.remove('hidden');
+            window.scrollTo(0,0);
+        };
+
+        window.switchAdminTab = function(tab) {
+            document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+            document.getElementById('admin-' + tab).classList.add('active');
+            document.querySelectorAll('[id^="tab-btn-"]').forEach(b => { b.classList.remove('bg-medical-50', 'text-medical-700', 'border-medical-600'); b.classList.add('border-transparent'); });
+            const btn = document.getElementById('tab-btn-' + tab);
+            if(btn) { btn.classList.remove('border-transparent'); btn.classList.add('bg-medical-50', 'text-medical-700', 'border-medical-600'); }
+        };
+
+        window.renderAdminAll = function() {
+            document.getElementById('admin-news-list').innerHTML = newsData.map(n => `<tr><td class="p-4 font-bold text-gray-800">${n.title}</td><td class="p-4 text-center"><button onclick="window.adminDelNews(${n.id})" class="text-red-500 hover:bg-red-50 p-2 rounded"><i class="fas fa-trash"></i></button></td></tr>`).join('');
+            document.getElementById('admin-vaccine-list').innerHTML = vaccineScheduleData.map(v => `<tr><td class="p-4 font-bold">${v.date}</td><td class="p-4 text-gray-600">${v.target}</td><td class="p-4 text-center"><button onclick="window.adminDelVac('${v.id}')" class="text-red-500 hover:bg-red-50 p-2 rounded"><i class="fas fa-trash"></i></button></td></tr>`).join('');
+            document.getElementById('admin-docs-list').innerHTML = documentsData.map(d => `<tr><td class="p-4 font-bold">${d.title}</td><td class="p-4">${d.type}</td><td class="p-4 text-center"><button onclick="window.adminDelDoc('${d.id}')" class="text-red-500 hover:bg-red-50 p-2 rounded"><i class="fas fa-trash"></i></button></td></tr>`).join('');
+            document.getElementById('admin-service-list').innerHTML = serviceManagers.map(s => `<tr><td class="p-4 font-bold">${s.name}</td><td class="p-4">${s.person}</td><td class="p-4">${s.zalo}</td><td class="p-4 text-center"><button onclick="window.adminDelSrv('${s.id}')" class="text-red-500 hover:bg-red-50 p-2 rounded"><i class="fas fa-trash"></i></button></td></tr>`).join('');
+            document.getElementById('admin-user-list').innerHTML = adminUsers.map(u => `<tr><td class="p-4 font-bold">${u.username}</td><td class="p-4">${u.name}</td><td class="p-4 text-center"><button onclick="window.adminDelUser('${u.id}')" class="text-red-500 hover:bg-red-50 p-2 rounded"><i class="fas fa-trash"></i></button></td></tr>`).join('');
+            window.renderAll();
+        };
+
+        // ADMIN ADD
+        window.adminAddNews = function(e) {
+            e.preventDefault(); newsData.unshift({ id: Date.now(), title: document.getElementById('an-title').value, description: document.getElementById('an-desc').value, date: new Date().toLocaleDateString('vi-VN'), icon: 'fa-bullhorn', color: 'medical' });
+            window.renderAdminAll(); window.showToast("Đã đăng tin!"); e.target.reset();
+        };
+        window.adminAddVaccine = function(e) {
+            e.preventDefault(); vaccineScheduleData.push({ id: 'V'+Date.now(), date: document.getElementById('av-date').value, target: document.getElementById('av-target').value });
+            window.renderAdminAll(); window.showToast("Đã thêm lịch tiêm!"); e.target.reset();
+        };
+        window.adminAddDoc = function(e) {
+            e.preventDefault(); documentsData.push({ id: 'D'+Date.now(), title: document.getElementById('ad-title').value, type: document.getElementById('ad-type').value, url: document.getElementById('ad-url').value, date: new Date().toLocaleDateString('vi-VN') });
+            window.renderAdminAll(); window.showToast("Đã tải tài liệu!"); e.target.reset();
+        };
+        window.adminAddService = function(e) {
+            e.preventDefault(); serviceManagers.push({ id: 'S'+Date.now(), name: document.getElementById('as-name').value, person: document.getElementById('as-person').value, zalo: document.getElementById('as-zalo').value });
+            window.renderAdminAll(); window.showToast("Đã thêm cán bộ/khoa!"); e.target.reset();
+        };
+        window.adminAddUser = function(e) {
+            e.preventDefault(); adminUsers.push({ id: 'U'+Date.now(), username: document.getElementById('au-email').value, name: document.getElementById('au-name').value, role: 'Admin' });
+            window.renderAdminAll(); window.showToast("Đã cấp quyền truy cập!"); e.target.reset();
+        };
+
+        // ADMIN DELETE
+        window.adminDelNews = function(id) { if(confirm("Xóa tin tức này?")) { newsData = newsData.filter(x=>x.id!==id); window.renderAdminAll(); window.showToast("Đã xóa!"); } };
+        window.adminDelVac = function(id) { if(confirm("Xóa lịch tiêm này?")) { vaccineScheduleData = vaccineScheduleData.filter(x=>x.id!==id); window.renderAdminAll(); window.showToast("Đã xóa!"); } };
+        window.adminDelDoc = function(id) { if(confirm("Xóa tài liệu này?")) { documentsData = documentsData.filter(x=>x.id!==id); window.renderAdminAll(); window.showToast("Đã xóa!"); } };
+        window.adminDelSrv = function(id) { if(confirm("Xóa Cán bộ / Khoa này?")) { serviceManagers = serviceManagers.filter(x=>x.id!==id); window.renderAdminAll(); window.showToast("Đã xóa!"); } };
+        window.adminDelUser = function(id) { if(confirm("Hủy quyền Cán bộ này?")) { adminUsers = adminUsers.filter(x=>x.id!==id); window.renderAdminAll(); window.showToast("Đã xóa!"); } };
+
+        // INIT
+        window.onload = () => { window.renderAll(); };
+    </script>
+</body>
+</html>
